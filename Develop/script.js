@@ -10,6 +10,8 @@ function promptPassword() {
   var symbol = confirm("Would you like to use symbols?");
 }
 
+
+
 // The generate password button with an event listener that is to be clicked
 document.querySelector('#generate').addEventListener('click', promptPassword);
 
@@ -43,3 +45,8 @@ function generateSym() {
   const symbols = "!@#$%^&*()_+-=";
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+console.log(generateLow());
+console.log(generateUp());
+console.log(generateNum());
+console.log(generateSym());
