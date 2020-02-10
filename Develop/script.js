@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// The generate password button with an event listener that is to be clicked
+document.querySelector('#generate').addEventListener('click', promptPassword);
+
 // Prompts on the page when Generate Password button is clicked
 function promptPassword() {
   var howLong = prompt("How long would you like your password to be?");
@@ -10,18 +13,16 @@ function promptPassword() {
   var symbol = confirm("Would you like to use symbols?");
 }
 
-
-
-// The generate password button with an event listener that is to be clicked
-document.querySelector('#generate').addEventListener('click', promptPassword);
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.getElementById("#password");
 
   passwordText.value = password;
 
+  if (lower === true)
+    password.innerText = passwordText(generateLow, generateNum, generateUp, GenerateSym);
+  return ('lower');
 }
 
 // Different functions using the Browser Character Set 
